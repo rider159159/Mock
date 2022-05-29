@@ -1,0 +1,19 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mock": "set PORT=3034 && nodemon index.js"
+
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mockjs": "^1.1.0",
+    "multer": "^1.4.2",
+    "@nuxtjs/dotenv": "^1.4.1"
+  }
+}
