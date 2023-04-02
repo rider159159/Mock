@@ -10,19 +10,12 @@ const cors = require("./utils/cors");
 app.use('/*', cors);
 
 
-const test = require("./routers/test");
-app.use('/api', test);
-
-const wayne1894_nuxt = require("./routers/wayne1894_nuxt");
-app.use('/', wayne1894_nuxt);
-
+const api = require("./routers/api");
+app.use('/api', api);
 
 app.use((req, res, next) => {
-  console.log('Time:', Date.now());
   next();
 });
-
-app.get('/', (req, res) => res.send('Hello World222!'))
 
 
 app.listen(port, () => console.log(`mock server listening at http://localhost:${port}`))
