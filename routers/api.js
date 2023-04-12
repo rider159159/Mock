@@ -27,17 +27,23 @@ app.get('/projectList', (req, res) => {
         {
           title: '突破百萬！S7 正反包 / S6 翻轉包｜正反反正都好看，ST@TEMENT 雙包，同步新登場！',
           image: 'https://assets.zeczec.com/asset_610614_image_big.jpg',
-          id: 'revopoint-range-1'
+          id: 'revopoint-range-1',
+          originalPrice: 500,
+          discountPrice: 400,
         },
         {
           title: '突破百萬！S7 正反包 / S6 翻轉包｜正反反正都好看，ST@TEMENT 雙包，同步新登場！',
           image: 'https://assets.zeczec.com/asset_610614_image_big.jpg',
-          id: 'revopoint-range-2'
+          id: 'revopoint-range-2',
+          originalPrice: 1000,
+          discountPrice: 700,
         },
         {
           title: '突破百萬！S7 正反包 / S6 翻轉包｜正反反正都好看，ST@TEMENT 雙包，同步新登場！',
           image: 'https://assets.zeczec.com/asset_610614_image_big.jpg',
-          id: 'revopoint-range-3'
+          id: 'revopoint-range-3',
+          originalPrice: 1000,
+          discountPrice: 770,
         }
       ],
     },
@@ -63,10 +69,9 @@ app.get('/memberInfo', (req, res) => {
 })
 
 app.post('/form', async (req, res) => {
-   await sleep(0)
-   console.log(req.body,"req.body")
-   //res.status(401);
-   res.json({ title: 'wayne53535522', message: 'Hello there!'})
+  await sleep(0)
+  console.log(req.body,"req.body")
+  res.json({ title: 'wayne53535522', message: 'Hello there!'})
 })
 
 app.post("/file", async (req, res, next) => {
